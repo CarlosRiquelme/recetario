@@ -68,3 +68,7 @@ def nuevo_comentario(request):
 	else:
 		formulario=ComentarioForm()
 	return render_to_response('comentarioform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+
+	#qqqqqqqqqqqqqwwwwwwwwwwwwwww
+###
+#asdfasdfasdfasdfasdfasdf
