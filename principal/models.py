@@ -27,3 +27,5 @@ class Comentario(models.Model):
   texto=models.TextField(help_text='Tu Comentario', verbose_name='Comentario')
   def __unicode__(self):
       return self.texto
+
+#comentario de prueba para el branch de thekukulele
