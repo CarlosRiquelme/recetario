@@ -29,3 +29,4 @@ class Comentario(models.Model):
       return self.texto
 
 #comentario de prueba para el branch de thekukulele
+#comentario jojo
