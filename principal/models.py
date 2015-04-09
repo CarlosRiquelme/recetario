@@ -30,3 +30,4 @@ class Comentario(models.Model):
 
 #comentario de prueba para el branch de thekukulele
 #comentario jojo
+#comentario jojo2
