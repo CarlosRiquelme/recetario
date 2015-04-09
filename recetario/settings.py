@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    #'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,6 +86,7 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'carga')
 
+
 #MEDIA_ROOT=[os.path.join(BASE_DIR,'cargar')],
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
@@ -91,8 +94,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'carga')
 STATIC_URL = '/static/'
 MEDIA_URL='/carga/'
 
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR,'static'),
+)
+
+
 EMAIL_USE_TLS= True
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='holagmail.com'
-EMAIL_HOST_PASSWORD='hola'
+EMAIL_HOST_USER='gestorprojectpic@gmail.com'
+EMAIL_HOST_PASSWORD='paolaivantato'
 EMAIL_PORT= 587

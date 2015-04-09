@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>principal.views</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="principal-module.html">Package&nbsp;principal</a> ::
+        Module&nbsp;views
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="principal.views-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="principal.views-module.html">Module principal.views</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package principal=principal-module.html"><a title="principal" class="py-name" href="#" onclick="return doclink('link-0', 'principal', 'link-0');">principal</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module principal.models=principal.models-module.html"><a title="principal.models" class="py-name" href="#" onclick="return doclink('link-1', 'models', 'link-1');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class principal.models.Bebida=principal.models.Bebida-class.html"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-2', 'Bebida', 'link-2');">Bebida</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Class principal.models.Receta=principal.models.Receta-class.html"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-3', 'Receta', 'link-3');">Receta</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Class principal.models.Comentario=principal.models.Comentario-class.html"><a title="principal.models.Comentario" class="py-name" href="#" onclick="return doclink('link-4', 'Comentario', 'link-4');">Comentario</a></tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">shortcuts</tt> <tt class="py-keyword">import</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">,</tt> <tt class="py-name">get_object_or_404</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">http</tt> <tt class="py-keyword">import</tt> <tt class="py-name">HttpResponse</tt><tt class="py-op">,</tt> <tt class="py-name">HttpResponseRedirect</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">contrib</tt><tt class="py-op">.</tt><tt class="py-name">auth</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="principal.models" class="py-name" href="#" onclick="return doclink('link-5', 'models', 'link-1');">models</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">User</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">template</tt> <tt class="py-keyword">import</tt> <tt class="py-name">RequestContext</tt>  </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name"><a title="principal" class="py-name" href="#" onclick="return doclink('link-6', 'principal', 'link-0');">principal</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Module principal.forms=principal.forms-module.html"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-7', 'forms', 'link-7');">forms</a></tt> <tt class="py-keyword">import</tt> <tt id="link-8" class="py-name" targets="Class principal.forms.RecetaForm=principal.forms.RecetaForm-class.html"><a title="principal.forms.RecetaForm" class="py-name" href="#" onclick="return doclink('link-8', 'RecetaForm', 'link-8');">RecetaForm</a></tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name" targets="Class principal.forms.ComentarioForm=principal.forms.ComentarioForm-class.html"><a title="principal.forms.ComentarioForm" class="py-name" href="#" onclick="return doclink('link-9', 'ComentarioForm', 'link-9');">ComentarioForm</a></tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name" targets="Class principal.forms.ContactoForm=principal.forms.ContactoForm-class.html"><a title="principal.forms.ContactoForm" class="py-name" href="#" onclick="return doclink('link-10', 'ContactoForm', 'link-10');">ContactoForm</a></tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name" targets="Class principal.forms.BebidaForm=principal.forms.BebidaForm-class.html"><a title="principal.forms.BebidaForm" class="py-name" href="#" onclick="return doclink('link-11', 'BebidaForm', 'link-11');">BebidaForm</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">core</tt><tt class="py-op">.</tt><tt class="py-name">mail</tt> <tt class="py-keyword">import</tt> <tt class="py-name">EmailMessage</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="lista_bebidas"></a><div id="lista_bebidas-def"><a name="L9"></a><tt class="py-lineno"> 9</tt> <a class="py-toggle" href="#" id="lista_bebidas-toggle" onclick="return toggle('lista_bebidas');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#lista_bebidas">lista_bebidas</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="lista_bebidas-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="lista_bebidas-expanded"><a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">        <tt class="py-name">bebidas</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-12', 'Bebida', 'link-2');">Bebida</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'lista_bebidas.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'lista'</tt><tt class="py-op">:</tt><tt class="py-name">bebidas</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="sobre"></a><div id="sobre-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="sobre-toggle" onclick="return toggle('sobre');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#sobre">sobre</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="sobre-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="sobre-expanded"><a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">        <tt class="py-name">html</tt><tt class="py-op">=</tt><tt class="py-string">"&lt;html&gt;&lt;body&gt;Proyecto de Ejemplo en MDW&lt;/body&gt;&lt;/html&gt;"</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">HttpResponse</tt><tt class="py-op">(</tt><tt class="py-name">html</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="inicio"></a><div id="inicio-def"><a name="L17"></a><tt class="py-lineno">17</tt> <a class="py-toggle" href="#" id="inicio-toggle" onclick="return toggle('inicio');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#inicio">inicio</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="inicio-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="inicio-expanded"><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt class="py-name">recetas</tt><tt class="py-op">=</tt><tt id="link-13" class="py-name"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-13', 'Receta', 'link-3');">Receta</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt class="py-name">bebidas</tt><tt class="py-op">=</tt><tt id="link-14" class="py-name"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-14', 'Bebida', 'link-2');">Bebida</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'inicio.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'recetas'</tt><tt class="py-op">:</tt><tt class="py-name">recetas</tt><tt class="py-op">,</tt><tt class="py-string">'bebidas'</tt><tt class="py-op">:</tt><tt class="py-name">bebidas</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="usuarios"></a><div id="usuarios-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="usuarios-toggle" onclick="return toggle('usuarios');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#usuarios">usuarios</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="usuarios-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="usuarios-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt id="link-15" class="py-name" targets="Function principal.views.usuarios()=principal.views-module.html#usuarios"><a title="principal.views.usuarios" class="py-name" href="#" onclick="return doclink('link-15', 'usuarios', 'link-15');">usuarios</a></tt><tt class="py-op">=</tt><tt class="py-name">User</tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-name">recetas</tt><tt class="py-op">=</tt><tt id="link-16" class="py-name"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-16', 'Receta', 'link-3');">Receta</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-name">bebidas</tt><tt class="py-op">=</tt><tt id="link-17" class="py-name"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-17', 'Bebida', 'link-2');">Bebida</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'usuarios.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'usuarios'</tt><tt class="py-op">:</tt><tt id="link-18" class="py-name"><a title="principal.views.usuarios" class="py-name" href="#" onclick="return doclink('link-18', 'usuarios', 'link-15');">usuarios</a></tt><tt class="py-op">,</tt><tt class="py-string">'recetas'</tt><tt class="py-op">:</tt><tt class="py-name">recetas</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="lista_recetas"></a><div id="lista_recetas-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="lista_recetas-toggle" onclick="return toggle('lista_recetas');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#lista_recetas">lista_recetas</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="lista_recetas-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="lista_recetas-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">recetas</tt><tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-19', 'Receta', 'link-3');">Receta</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'recetas.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'datos'</tt><tt class="py-op">:</tt><tt class="py-name">recetas</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">context_instance</tt><tt class="py-op">=</tt><tt class="py-name">RequestContext</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="detalle_receta"></a><div id="detalle_receta-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="detalle_receta-toggle" onclick="return toggle('detalle_receta');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#detalle_receta">detalle_receta</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">id_receta</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="detalle_receta-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="detalle_receta-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-name">dato</tt><tt class="py-op">=</tt><tt class="py-name">get_object_or_404</tt><tt class="py-op">(</tt><tt id="link-20" class="py-name"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-20', 'Receta', 'link-3');">Receta</a></tt><tt class="py-op">,</tt> <tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">id_receta</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt class="py-name">comentarios</tt><tt class="py-op">=</tt><tt id="link-21" class="py-name"><a title="principal.models.Comentario" class="py-name" href="#" onclick="return doclink('link-21', 'Comentario', 'link-4');">Comentario</a></tt><tt class="py-op">.</tt><tt class="py-name">objects</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-22" class="py-name" targets="Variable principal.models.Comentario.receta=principal.models.Comentario-class.html#receta"><a title="principal.models.Comentario.receta" class="py-name" href="#" onclick="return doclink('link-22', 'receta', 'link-22');">receta</a></tt><tt class="py-op">=</tt><tt class="py-name">dato</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'receta.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'receta'</tt><tt class="py-op">:</tt><tt class="py-name">dato</tt><tt class="py-op">,</tt><tt class="py-string">'comentarios'</tt><tt class="py-op">:</tt><tt class="py-name">comentarios</tt><tt class="py-op">}</tt><tt class="py-op">,</tt><tt class="py-name">context_instance</tt><tt class="py-op">=</tt><tt class="py-name">RequestContext</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"> </tt>
+<a name="contacto"></a><div id="contacto-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="contacto-toggle" onclick="return toggle('contacto');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#contacto">contacto</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="contacto-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="contacto-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt> <tt class="py-op">==</tt> <tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt><tt id="link-23" class="py-name"><a title="principal.forms.ContactoForm" class="py-name" href="#" onclick="return doclink('link-23', 'ContactoForm', 'link-10');">ContactoForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                        <tt id="link-24" class="py-name" targets="Variable principal.models.Receta.titulo=principal.models.Receta-class.html#titulo"><a title="principal.models.Receta.titulo" class="py-name" href="#" onclick="return doclink('link-24', 'titulo', 'link-24');">titulo</a></tt><tt class="py-op">=</tt><tt class="py-string">'Mensaje desde el recetario'</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">                        <tt class="py-name">contenido</tt><tt class="py-op">=</tt><tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">cleaned_data</tt><tt class="py-op">[</tt><tt class="py-string">'mensaje'</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-string">"\n"</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                        <tt class="py-name">contenido</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Comunicarse a:'</tt> <tt class="py-op">+</tt> <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">cleaned_data</tt><tt class="py-op">[</tt><tt class="py-string">'correo'</tt><tt class="py-op">]</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                        <tt id="link-25" class="py-name" targets="Variable principal.forms.ContactoForm.correo=principal.forms.ContactoForm-class.html#correo"><a title="principal.forms.ContactoForm.correo" class="py-name" href="#" onclick="return doclink('link-25', 'correo', 'link-25');">correo</a></tt><tt class="py-op">=</tt><tt class="py-name">EmailMessage</tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="principal.models.Receta.titulo" class="py-name" href="#" onclick="return doclink('link-26', 'titulo', 'link-24');">titulo</a></tt><tt class="py-op">,</tt> <tt class="py-name">contenido</tt><tt class="py-op">,</tt> <tt class="py-name">to</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-string">'tato26.09@gmail.com'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                        <tt id="link-27" class="py-name"><a title="principal.forms.ContactoForm.correo" class="py-name" href="#" onclick="return doclink('link-27', 'correo', 'link-25');">correo</a></tt><tt class="py-op">.</tt><tt class="py-name">send</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">HttpResponseRedirect</tt><tt class="py-op">(</tt><tt class="py-string">'/'</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt><tt id="link-28" class="py-name"><a title="principal.forms.ContactoForm" class="py-name" href="#" onclick="return doclink('link-28', 'ContactoForm', 'link-10');">ContactoForm</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'contactoform.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'formulario'</tt><tt class="py-op">:</tt><tt class="py-name">formulario</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">context_instance</tt><tt class="py-op">=</tt><tt class="py-name">RequestContext</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"> </tt>
+<a name="nueva_receta"></a><div id="nueva_receta-def"><a name="L52"></a><tt class="py-lineno">52</tt> <a class="py-toggle" href="#" id="nueva_receta-toggle" onclick="return toggle('nueva_receta');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#nueva_receta">nueva_receta</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nueva_receta-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="nueva_receta-expanded"><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt><tt class="py-op">==</tt><tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt><tt id="link-29" class="py-name"><a title="principal.forms.RecetaForm" class="py-name" href="#" onclick="return doclink('link-29', 'RecetaForm', 'link-8');">RecetaForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt><tt class="py-op">,</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">FILES</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">                        <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">HttpResponseRedirect</tt><tt class="py-op">(</tt><tt class="py-string">'/recetas'</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt><tt id="link-30" class="py-name"><a title="principal.forms.RecetaForm" class="py-name" href="#" onclick="return doclink('link-30', 'RecetaForm', 'link-8');">RecetaForm</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'recetaform.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'formulario'</tt><tt class="py-op">:</tt><tt class="py-name">formulario</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">context_instance</tt><tt class="py-op">=</tt><tt class="py-name">RequestContext</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"> </tt>
+<a name="nuevo_comentario"></a><div id="nuevo_comentario-def"><a name="L62"></a><tt class="py-lineno">62</tt> <a class="py-toggle" href="#" id="nuevo_comentario-toggle" onclick="return toggle('nuevo_comentario');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="principal.views-module.html#nuevo_comentario">nuevo_comentario</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nuevo_comentario-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="nuevo_comentario-expanded"><a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt><tt class="py-op">==</tt><tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="principal.forms.ComentarioForm" class="py-name" href="#" onclick="return doclink('link-31', 'ComentarioForm', 'link-9');">ComentarioForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">                        <tt class="py-name">formulario</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">HttpResponseRedirect</tt><tt class="py-op">(</tt><tt class="py-string">'/recetas'</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">                <tt class="py-name">formulario</tt><tt class="py-op">=</tt><tt id="link-32" class="py-name"><a title="principal.forms.ComentarioForm" class="py-name" href="#" onclick="return doclink('link-32', 'ComentarioForm', 'link-9');">ComentarioForm</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'comentarioform.html'</tt><tt class="py-op">,</tt><tt class="py-op">{</tt><tt class="py-string">'formulario'</tt><tt class="py-op">:</tt><tt class="py-name">formulario</tt><tt class="py-op">}</tt><tt class="py-op">,</tt> <tt class="py-name">context_instance</tt><tt class="py-op">=</tt><tt class="py-name">RequestContext</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Mar 28 06:56:26 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

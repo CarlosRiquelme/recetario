@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>recetario.settings</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="recetario-module.html">Package&nbsp;recetario</a> ::
+        Module&nbsp;settings
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="recetario.settings-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="recetario.settings-module.html">Module recetario.settings</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Django settings for recetario project.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">For more information on this file, see</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">https://docs.djangoproject.com/en/1.7/topics/settings/</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">For the full list of settings and their values, see</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">https://docs.djangoproject.com/en/1.7/ref/settings/</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># Build paths inside the project like this: os.path.join(BASE_DIR, ...)</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable recetario.settings.BASE_DIR=recetario.settings-module.html#BASE_DIR"><a title="recetario.settings.BASE_DIR" class="py-name" href="#" onclick="return doclink('link-0', 'BASE_DIR', 'link-0');">BASE_DIR</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># Quick-start development settings - unsuitable for production</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># SECURITY WARNING: keep the secret key used in production secret!</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable recetario.settings.SECRET_KEY=recetario.settings-module.html#SECRET_KEY"><a title="recetario.settings.SECRET_KEY" class="py-name" href="#" onclick="return doclink('link-1', 'SECRET_KEY', 'link-1');">SECRET_KEY</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'@c%-p75gwq5c3*qe8am4citgys(!je##m6-j#(*k8n61bnkvvy'</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># SECURITY WARNING: don't run with debug turned on in production!</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable recetario.settings.DEBUG=recetario.settings-module.html#DEBUG"><a title="recetario.settings.DEBUG" class="py-name" href="#" onclick="return doclink('link-2', 'DEBUG', 'link-2');">DEBUG</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable recetario.settings.TEMPLATE_DEBUG=recetario.settings-module.html#TEMPLATE_DEBUG"><a title="recetario.settings.TEMPLATE_DEBUG" class="py-name" href="#" onclick="return doclink('link-3', 'TEMPLATE_DEBUG', 'link-3');">TEMPLATE_DEBUG</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable recetario.settings.ALLOWED_HOSTS=recetario.settings-module.html#ALLOWED_HOSTS"><a title="recetario.settings.ALLOWED_HOSTS" class="py-name" href="#" onclick="return doclink('link-4', 'ALLOWED_HOSTS', 'link-4');">ALLOWED_HOSTS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment"># Application definition</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable recetario.settings.INSTALLED_APPS=recetario.settings-module.html#INSTALLED_APPS"><a title="recetario.settings.INSTALLED_APPS" class="py-name" href="#" onclick="return doclink('link-5', 'INSTALLED_APPS', 'link-5');">INSTALLED_APPS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-comment">#'django_admin_bootstrapped.bootstrap3',</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-string">'django_admin_bootstrapped'</tt><tt class="py-op">,</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.admin'</tt><tt class="py-op">,</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.auth'</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.contenttypes'</tt><tt class="py-op">,</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.sessions'</tt><tt class="py-op">,</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.messages'</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.staticfiles'</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-string">'principal'</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable recetario.settings.MIDDLEWARE_CLASSES=recetario.settings-module.html#MIDDLEWARE_CLASSES"><a title="recetario.settings.MIDDLEWARE_CLASSES" class="py-name" href="#" onclick="return doclink('link-6', 'MIDDLEWARE_CLASSES', 'link-6');">MIDDLEWARE_CLASSES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.sessions.middleware.SessionMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-string">'django.middleware.common.CommonMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-string">'django.middleware.csrf.CsrfViewMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.auth.middleware.AuthenticationMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.auth.middleware.SessionAuthenticationMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-string">'django.contrib.messages.middleware.MessageMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-string">'django.middleware.clickjacking.XFrameOptionsMiddleware'</tt><tt class="py-op">,</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable recetario.settings.ROOT_URLCONF=recetario.settings-module.html#ROOT_URLCONF"><a title="recetario.settings.ROOT_URLCONF" class="py-name" href="#" onclick="return doclink('link-7', 'ROOT_URLCONF', 'link-7');">ROOT_URLCONF</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'recetario.urls'</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable recetario.settings.WSGI_APPLICATION=recetario.settings-module.html#WSGI_APPLICATION"><a title="recetario.settings.WSGI_APPLICATION" class="py-name" href="#" onclick="return doclink('link-8', 'WSGI_APPLICATION', 'link-8');">WSGI_APPLICATION</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'recetario.wsgi.application'</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-comment"># Database</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-comment"># https://docs.djangoproject.com/en/1.7/ref/settings/#databases</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable recetario.settings.DATABASES=recetario.settings-module.html#DATABASES"><a title="recetario.settings.DATABASES" class="py-name" href="#" onclick="return doclink('link-9', 'DATABASES', 'link-9');">DATABASES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-string">'default'</tt><tt class="py-op">:</tt> <tt class="py-op">{</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-string">'ENGINE'</tt><tt class="py-op">:</tt> <tt class="py-string">'django.db.backends.postgresql_psycopg2'</tt><tt class="py-op">,</tt> <tt class="py-comment"># Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt> <tt class="py-string">'recetarioDB'</tt><tt class="py-op">,</tt>                      <tt class="py-comment"># Or path to database file if using sqlite3.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-string">'USER'</tt><tt class="py-op">:</tt> <tt class="py-string">'postgres'</tt><tt class="py-op">,</tt>                      <tt class="py-comment"># Not used with sqlite3.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-string">'PASSWORD'</tt><tt class="py-op">:</tt> <tt class="py-string">'postgres'</tt><tt class="py-op">,</tt>                  <tt class="py-comment"># Not used with sqlite3.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-string">'HOST'</tt><tt class="py-op">:</tt> <tt class="py-string">'localhost'</tt><tt class="py-op">,</tt>                      <tt class="py-comment"># Set to empty string for localhost. Not used with sqlite3.</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-string">'PORT'</tt><tt class="py-op">:</tt> <tt class="py-string">'5432'</tt><tt class="py-op">,</tt>                      <tt class="py-comment"># Set to empty string for default. Not used with sqlite3.</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-comment"># Internationalization</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment"># https://docs.djangoproject.com/en/1.7/topics/i18n/</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable recetario.settings.LANGUAGE_CODE=recetario.settings-module.html#LANGUAGE_CODE"><a title="recetario.settings.LANGUAGE_CODE" class="py-name" href="#" onclick="return doclink('link-10', 'LANGUAGE_CODE', 'link-10');">LANGUAGE_CODE</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'en-us'</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable recetario.settings.TIME_ZONE=recetario.settings-module.html#TIME_ZONE"><a title="recetario.settings.TIME_ZONE" class="py-name" href="#" onclick="return doclink('link-11', 'TIME_ZONE', 'link-11');">TIME_ZONE</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'UTC'</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable recetario.settings.USE_I18N=recetario.settings-module.html#USE_I18N"><a title="recetario.settings.USE_I18N" class="py-name" href="#" onclick="return doclink('link-12', 'USE_I18N', 'link-12');">USE_I18N</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable recetario.settings.USE_L10N=recetario.settings-module.html#USE_L10N"><a title="recetario.settings.USE_L10N" class="py-name" href="#" onclick="return doclink('link-13', 'USE_L10N', 'link-13');">USE_L10N</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable recetario.settings.USE_TZ=recetario.settings-module.html#USE_TZ"><a title="recetario.settings.USE_TZ" class="py-name" href="#" onclick="return doclink('link-14', 'USE_TZ', 'link-14');">USE_TZ</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt id="link-15" class="py-name" targets="Variable recetario.settings.TEMPLATE_DIRS=recetario.settings-module.html#TEMPLATE_DIRS"><a title="recetario.settings.TEMPLATE_DIRS" class="py-name" href="#" onclick="return doclink('link-15', 'TEMPLATE_DIRS', 'link-15');">TEMPLATE_DIRS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="recetario.settings.BASE_DIR" class="py-name" href="#" onclick="return doclink('link-16', 'BASE_DIR', 'link-0');">BASE_DIR</a></tt><tt class="py-op">,</tt> <tt class="py-string">'templates'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt id="link-17" class="py-name" targets="Variable recetario.settings.MEDIA_ROOT=recetario.settings-module.html#MEDIA_ROOT"><a title="recetario.settings.MEDIA_ROOT" class="py-name" href="#" onclick="return doclink('link-17', 'MEDIA_ROOT', 'link-17');">MEDIA_ROOT</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="recetario.settings.BASE_DIR" class="py-name" href="#" onclick="return doclink('link-18', 'BASE_DIR', 'link-0');">BASE_DIR</a></tt><tt class="py-op">,</tt><tt class="py-string">'carga'</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-comment">#MEDIA_ROOT=[os.path.join(BASE_DIR,'cargar')],</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-comment"># Static files (CSS, JavaScript, Images)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-comment"># https://docs.djangoproject.com/en/1.7/howto/static-files/</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt id="link-19" class="py-name" targets="Variable recetario.settings.STATIC_URL=recetario.settings-module.html#STATIC_URL"><a title="recetario.settings.STATIC_URL" class="py-name" href="#" onclick="return doclink('link-19', 'STATIC_URL', 'link-19');">STATIC_URL</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'/static/'</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt id="link-20" class="py-name" targets="Variable recetario.settings.MEDIA_URL=recetario.settings-module.html#MEDIA_URL"><a title="recetario.settings.MEDIA_URL" class="py-name" href="#" onclick="return doclink('link-20', 'MEDIA_URL', 'link-20');">MEDIA_URL</a></tt><tt class="py-op">=</tt><tt class="py-string">'/carga/'</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable recetario.settings.STATIC_ROOT=recetario.settings-module.html#STATIC_ROOT"><a title="recetario.settings.STATIC_ROOT" class="py-name" href="#" onclick="return doclink('link-21', 'STATIC_ROOT', 'link-21');">STATIC_ROOT</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'staticfiles'</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable recetario.settings.STATICFILES_DIRS=recetario.settings-module.html#STATICFILES_DIRS"><a title="recetario.settings.STATICFILES_DIRS" class="py-name" href="#" onclick="return doclink('link-22', 'STATICFILES_DIRS', 'link-22');">STATICFILES_DIRS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-comment"># Put strings here, like "/home/html/static" or "C:/www/django/static".</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-comment"># Always use forward slashes, even on Windows.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">    <tt class="py-comment"># Don't forget to use absolute paths, not relative paths.</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-23" class="py-name"><a title="recetario.settings.BASE_DIR" class="py-name" href="#" onclick="return doclink('link-23', 'BASE_DIR', 'link-0');">BASE_DIR</a></tt><tt class="py-op">,</tt><tt class="py-string">'static'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable recetario.settings.EMAIL_USE_TLS=recetario.settings-module.html#EMAIL_USE_TLS"><a title="recetario.settings.EMAIL_USE_TLS" class="py-name" href="#" onclick="return doclink('link-24', 'EMAIL_USE_TLS', 'link-24');">EMAIL_USE_TLS</a></tt><tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt id="link-25" class="py-name" targets="Variable recetario.settings.EMAIL_HOST=recetario.settings-module.html#EMAIL_HOST"><a title="recetario.settings.EMAIL_HOST" class="py-name" href="#" onclick="return doclink('link-25', 'EMAIL_HOST', 'link-25');">EMAIL_HOST</a></tt><tt class="py-op">=</tt><tt class="py-string">'smtp.gmail.com'</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable recetario.settings.EMAIL_HOST_USER=recetario.settings-module.html#EMAIL_HOST_USER"><a title="recetario.settings.EMAIL_HOST_USER" class="py-name" href="#" onclick="return doclink('link-26', 'EMAIL_HOST_USER', 'link-26');">EMAIL_HOST_USER</a></tt><tt class="py-op">=</tt><tt class="py-string">'gestorprojectpic@gmail.com'</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt id="link-27" class="py-name" targets="Variable recetario.settings.EMAIL_HOST_PASSWORD=recetario.settings-module.html#EMAIL_HOST_PASSWORD"><a title="recetario.settings.EMAIL_HOST_PASSWORD" class="py-name" href="#" onclick="return doclink('link-27', 'EMAIL_HOST_PASSWORD', 'link-27');">EMAIL_HOST_PASSWORD</a></tt><tt class="py-op">=</tt><tt class="py-string">'paolaivantato'</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable recetario.settings.EMAIL_PORT=recetario.settings-module.html#EMAIL_PORT"><a title="recetario.settings.EMAIL_PORT" class="py-name" href="#" onclick="return doclink('link-28', 'EMAIL_PORT', 'link-28');">EMAIL_PORT</a></tt><tt class="py-op">=</tt> <tt class="py-number">587</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Mar 28 06:56:26 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

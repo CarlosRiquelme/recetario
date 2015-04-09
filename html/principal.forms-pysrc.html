@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>principal.forms</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="principal-module.html">Package&nbsp;principal</a> ::
+        Module&nbsp;forms
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="principal.forms-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="principal.forms-module.html">Module principal.forms</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#encoding: utf-8</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module principal.forms=principal.forms-module.html"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-0', 'forms', 'link-0');">forms</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">ModelForm</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-1', 'forms', 'link-0');">forms</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Package principal=principal-module.html"><a title="principal" class="py-name" href="#" onclick="return doclink('link-2', 'principal', 'link-2');">principal</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module principal.models=principal.models-module.html"><a title="principal.models" class="py-name" href="#" onclick="return doclink('link-3', 'models', 'link-3');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Class principal.models.Receta=principal.models.Receta-class.html"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-4', 'Receta', 'link-4');">Receta</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Class principal.models.Comentario=principal.models.Comentario-class.html"><a title="principal.models.Comentario" class="py-name" href="#" onclick="return doclink('link-5', 'Comentario', 'link-5');">Comentario</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Class principal.models.Bebida=principal.models.Bebida-class.html"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-6', 'Bebida', 'link-6');">Bebida</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="ContactoForm"></a><div id="ContactoForm-def"><a name="L6"></a><tt class="py-lineno"> 6</tt> <a class="py-toggle" href="#" id="ContactoForm-toggle" onclick="return toggle('ContactoForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.ContactoForm-class.html">ContactoForm</a><tt class="py-op">(</tt><tt class="py-base-class">forms</tt><tt class="py-op">.</tt><tt class="py-base-class">Form</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ContactoForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ContactoForm-expanded"><a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line">        <tt id="link-7" class="py-name" targets="Variable principal.forms.ContactoForm.correo=principal.forms.ContactoForm-class.html#correo"><a title="principal.forms.ContactoForm.correo" class="py-name" href="#" onclick="return doclink('link-7', 'correo', 'link-7');">correo</a></tt><tt class="py-op">=</tt><tt id="link-8" class="py-name"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-8', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">EmailField</tt><tt class="py-op">(</tt><tt class="py-name">label</tt><tt class="py-op">=</tt><tt class="py-string">'Tu correo electronico'</tt><tt class="py-op">)</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">        <tt id="link-9" class="py-name" targets="Variable principal.forms.ContactoForm.mensaje=principal.forms.ContactoForm-class.html#mensaje"><a title="principal.forms.ContactoForm.mensaje" class="py-name" href="#" onclick="return doclink('link-9', 'mensaje', 'link-9');">mensaje</a></tt><tt class="py-op">=</tt><tt id="link-10" class="py-name"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-10', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">CharField</tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">=</tt><tt id="link-11" class="py-name"><a title="principal.forms" class="py-name" href="#" onclick="return doclink('link-11', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">Textarea</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="RecetaForm"></a><div id="RecetaForm-def"><a name="L10"></a><tt class="py-lineno">10</tt> <a class="py-toggle" href="#" id="RecetaForm-toggle" onclick="return toggle('RecetaForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.RecetaForm-class.html">RecetaForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecetaForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="RecetaForm-expanded"><a name="RecetaForm.Meta"></a><div id="RecetaForm.Meta-def"><a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="RecetaForm.Meta-toggle" onclick="return toggle('RecetaForm.Meta');">-</a><tt class="py-line">        <tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.RecetaForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="RecetaForm.Meta-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="RecetaForm.Meta-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">                <tt id="link-12" class="py-name" targets="Variable principal.forms.BebidaForm.Meta.model=principal.forms.BebidaForm.Meta-class.html#model,Variable principal.forms.ComentarioForm.Meta.model=principal.forms.ComentarioForm.Meta-class.html#model,Variable principal.forms.RecetaForm.Meta.model=principal.forms.RecetaForm.Meta-class.html#model"><a title="principal.forms.BebidaForm.Meta.model
+principal.forms.ComentarioForm.Meta.model
+principal.forms.RecetaForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-12', 'model', 'link-12');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="principal.models.Receta" class="py-name" href="#" onclick="return doclink('link-13', 'Receta', 'link-4');">Receta</a></tt> </tt>
+</div></div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="ComentarioForm"></a><div id="ComentarioForm-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="ComentarioForm-toggle" onclick="return toggle('ComentarioForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.ComentarioForm-class.html">ComentarioForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComentarioForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ComentarioForm-expanded"><a name="ComentarioForm.Meta"></a><div id="ComentarioForm.Meta-def"><a name="L15"></a><tt class="py-lineno">15</tt> <a class="py-toggle" href="#" id="ComentarioForm.Meta-toggle" onclick="return toggle('ComentarioForm.Meta');">-</a><tt class="py-line">        <tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.ComentarioForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="ComentarioForm.Meta-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="ComentarioForm.Meta-expanded"><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">                <tt id="link-14" class="py-name"><a title="principal.forms.BebidaForm.Meta.model
+principal.forms.ComentarioForm.Meta.model
+principal.forms.RecetaForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-14', 'model', 'link-12');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="principal.models.Comentario" class="py-name" href="#" onclick="return doclink('link-15', 'Comentario', 'link-5');">Comentario</a></tt> </tt>
+</div></div><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="BebidaForm"></a><div id="BebidaForm-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="BebidaForm-toggle" onclick="return toggle('BebidaForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.BebidaForm-class.html">BebidaForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BebidaForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="BebidaForm-expanded"><a name="BebidaForm.Meta"></a><div id="BebidaForm.Meta-def"><a name="L19"></a><tt class="py-lineno">19</tt> <a class="py-toggle" href="#" id="BebidaForm.Meta-toggle" onclick="return toggle('BebidaForm.Meta');">-</a><tt class="py-line">        <tt class="py-keyword">class</tt> <a class="py-def-name" href="principal.forms.BebidaForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="BebidaForm.Meta-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="BebidaForm.Meta-expanded"><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                <tt id="link-16" class="py-name"><a title="principal.forms.BebidaForm.Meta.model
+principal.forms.ComentarioForm.Meta.model
+principal.forms.RecetaForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-16', 'model', 'link-12');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="principal.models.Bebida" class="py-name" href="#" onclick="return doclink('link-17', 'Bebida', 'link-6');">Bebida</a></tt> </tt>
+</div></div><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Mar 28 06:56:26 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
